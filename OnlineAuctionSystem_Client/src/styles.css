@@ -1,0 +1,9 @@
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+body{
+    background-image: url(./assets/auction-website.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    
+}

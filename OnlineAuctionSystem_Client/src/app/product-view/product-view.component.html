@@ -1,0 +1,36 @@
+
+<body class="container"><h2 class="text-center">Product List
+</h2>
+<table class="table table-striped"  style="background-color:rgb(214, 233, 239)" >
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product Price</th>
+            <th>Product Start Bidding Amount</th>
+            <th>Product Bidding date</th>
+            <th>Product Category</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody *ngFor="let seller of sellers">
+        <tr *ngIf="seller.productID">
+            <td>{{seller.productID}}</td>
+            <td>{{seller.productName}}</td>
+            <td>{{seller.productDescription}}</td>
+            <td>{{seller.productPrice}}</td>
+            <td>{{seller.productStartamt}}</td>
+            <td>{{seller.productBiddingdate}}</td>
+            <td>{{seller.productCategory}}</td>
+            <td>
+                <button (click)="viewOneProduct(seller.sellerID)" class="btn btn-success">View</button>
+                <button (click)="deleteProduct(seller.sellerID)" class="btn btn-info" style="margin-top:5px">Delete</button>
+                
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
